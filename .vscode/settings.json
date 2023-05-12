@@ -28,7 +28,7 @@
           "entity.other.attribute-name.class.css"
         ],
         "settings": {
-          "foreground": "#fefb3b"
+          "foreground": "#f5ec70"
         }
       },
       // color of start quotes
@@ -124,18 +124,16 @@
       },
       {
         "scope": [
-          "entity.other.attribute-name.class.css
-          meta.selector.css"
+          "entity.other.attribute-name.class.css"
         ],
         "settings": {
-          "foreground": "#daf975"
+          "foreground": "#faac36"
           // change color only for entity.css
         }
       },
       {
         "scope": [
-          "support.function.misc.css
-          "
+          "support.function.misc.css"
         ],
         "settings": {
           "foreground": "#f24414"
@@ -145,8 +143,7 @@
 
       {
         "scope": [
-          "punctuation.terminator.rule.css
-          "
+          "punctuation.terminator.rule.css"
         ],
         "settings": {
           "foreground": "#f90505"
@@ -156,8 +153,7 @@
 
       {
         "scope": [
-          "text.html.derivative
-          "
+          "text.html.derivative"
         ],
         "settings": {
           "foreground": "#e5e2e2"
@@ -166,18 +162,16 @@
       },
       {
         "scope": [
-          "string.quoted.single.css
-          "
+          "string.quoted.single.css"
         ],
         "settings": {
           "foreground": "#f50808"
           // change color only for quoted.css
         }
-      }
+      },
       {
         "scope": [
-          "punctuation.definition.comment.end.css
-          "
+          "punctuation.definition.comment.end.css"
         ],
         "settings": {
           "foreground": "#f432b3"
@@ -186,15 +180,22 @@
       },
       {
         "scope": [
-          "punctuation.definition.comment.begin.css
-          comment.block.css
-          "
+          "punctuation.definition.comment.begin.css"
         ],
         "settings": {
           "foreground": "#f432b3"
           // change color only for comment.begin.css
         }
+      },
+    {
+      "scope": [
+        "meta.selector.css"
+      ],
+      "settings": {
+        "foreground": "#57a4ec"
+        // change color only for comment.begin.css
       }
+    }
     ]
   }
 }
