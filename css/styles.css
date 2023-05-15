@@ -36,6 +36,12 @@ body {
   --hover-customers-icon: #404bbf;
   --footer-social-hover: #31d0aa;
   --modal-bg-color: #fcfcfc;
+  --color-light: #ffffff;
+  --color-ocean: #404bbf;
+  --color-iris: #4d5ae5;
+  --color-navy-blue: #2e2f42;
+  /* Animation */
+  --anim-standart: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h1,
@@ -130,7 +136,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-standart);
   color: var(--link-color);
 }
 
@@ -168,7 +174,7 @@ img {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--contact-link-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-standart);
 }
 
 .site-address {
@@ -236,7 +242,7 @@ img {
   border-radius: 4px;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-standart);
 }
 
 .hero-btn:hover,
@@ -355,7 +361,7 @@ img {
   justify-content: center;
   align-items: center;
   color: #f4f4fd;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-standart);
 }
 
 .social-link:hover,
@@ -418,8 +424,8 @@ img {
   color: var(--customers-link-border-color);
   border: 1px solid var(--customers-link-border-color);
   border-radius: 4px;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--anim-standart),
+    color var(--anim-standart);
 }
 
 .customers-link:hover,
@@ -512,7 +518,7 @@ img {
   justify-content: center;
   align-items: center;
   color: var(--background-color);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-standart);
 }
 
 .footer-social-link:hover,
@@ -524,68 +530,105 @@ img {
   fill: var(--advantages-bg-color);
 }
 
-/* Subscribe section */
+/* Footer subscribe */
 
-.subscribe-form {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
-  gap: 24px;
+.footer-form {
+  padding: 0;
+  margin: 0;
+  margin-left: 80px;
 }
 
-.subscribe-wrapper {
-  display: flex;
- }
-
-.subscribe-form-field {
-  width: 264px;
+.footer-form-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--color-light);
+  padding-bottom: 16px;
 }
 
-.btn-wrapper{
+.footer-form-wrapper {
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 24px;
 
 }
 
-.subscribe-form-input {
-  width: 100%;
+.footer-form-field {
+  width: 264px;
   height: 40px;
-  border: 1px solid #ffffff;
+  position: relative;
+}
+
+.footer-form-input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: 1px solid var(--color-light);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: transparent;
+  color: var(--color-light);
+  padding: 0;
+  padding-left: 16px;
 }
 
-.subscribe-btn {
-  position: relative;
-  font-family: 'Roboto', sans-serif;
+.footer-form-tag {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: var(--color-light);
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  transform-origin: left center;
+  transition: transform var(--anim-standart);
+  background-color: var(--color-navy-blue);
+  padding: 0;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.footer-form-input:focus+.footer-form-tag,
+.footer-form-input:not(:placeholder-shown)+.footer-form-tag {
+  transform: translateY(-134%);
+}
+
+
+.footer-form-btn {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  width: 165px;
+  height: 40px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  background-color: var(--hero-btn-background-color);
-  color: var(--hero-btn-color);
-  cursor: pointer;
-  display: block;
-  padding: 10px 24px;
-  text-align: start;
-  min-width: 165px;
-  height: 40px;
-  border: none;
+  color: var(--color-light);
+  background-color: var(--color-iris);
   border-radius: 4px;
-  margin: 0 auto;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  border: none;
+  transition: background-color var(--anim-standart);
 }
 
-.subscribe-btn:hover,
-.subscribe-btn:focus {
-  background-color: var(--hero-btn-background-color-hover-focus);
+.footer-form-btn:hover,
+.footer-form-btn:focus {
+  background-color: var(--color-ocean);
 }
 
-.subscribe-icon {
-  position: absolute;
+.footer-form-btn-icon {
+  fill: var(--color-light);
 }
+
 
 /* Portfolio */
 
@@ -613,10 +656,10 @@ img {
   padding: 12px 24px;
   border: 1px solid var(--border-btn);
   border-radius: 4px;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color var(--anim-standart),
+    background-color var(--anim-standart),
+    border-color var(--anim-standart),
+    box-shadow var(--anim-standart);
 }
 
 .portfolio-btn:hover,
@@ -671,7 +714,7 @@ img {
   height: 100%;
   width: 100%;
   transform: translate(0, 100%);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform var(--anim-standart);
 }
 
 .gallery-link:hover .overlay,
@@ -714,8 +757,8 @@ img {
   height: 100%;
 
   background-color: rgba(46, 47, 66, 0.4);
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity var(--anim-standart),
+    visibility var(--anim-standart);
 }
 
 .modal {
@@ -732,7 +775,7 @@ img {
   padding-bottom: 24px;
 
   border-radius: 4px;
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-standart);
 
   background: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -758,8 +801,8 @@ img {
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-standart),
+    border var(--anim-standart);
 }
 
 .modal-close-btn:hover,
@@ -776,7 +819,7 @@ img {
 }
 
 .modal-close-icon {
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--anim-standart);
 }
 
 /* Form for modal window */
@@ -824,7 +867,7 @@ img {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-standart);
 
   outline: transparent;
 }
@@ -835,7 +878,7 @@ img {
   top: 50%;
   left: 18px;
   transform: translateY(-50%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-standart);
   pointer-events: none;
   fill: #2E2F42;
 }
@@ -846,7 +889,7 @@ position: absolute;
   top: 15%;
   left: 18px;
   transform: translateY(-50%);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-standart);
   pointer-events: none;
   fill: #2E2F42;
 }
@@ -877,7 +920,7 @@ position: absolute;
   outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--anim-standart));
 }
 
 .form-comment:focus {
@@ -904,7 +947,7 @@ position: absolute;
   border-radius: 4px;
   margin: 0 auto;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--anim-standart);
 }
 
 .form-btn:hover,
@@ -914,14 +957,13 @@ position: absolute;
 
 .form-agreement {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:start;
+  align-items:centr;
   gap: 8px;
   margin-bottom: 24px;
 }
 
 .form-agreement-text {
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.7;
@@ -933,6 +975,7 @@ position: absolute;
 
 .form-check-input {
   appearance: none;
+  display: ;
   /* display: block; */
 }
 
