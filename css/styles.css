@@ -594,7 +594,7 @@ img {
 
 .footer-form-input:focus+.footer-form-tag,
 .footer-form-input:not(:placeholder-shown)+.footer-form-tag {
-  transform: translateY(-134%);
+  transform: translateY(-150%);
 }
 
 
@@ -920,7 +920,7 @@ position: absolute;
   outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  transition: var(--anim-standart));
+  transition: var(--anim-standart);
 }
 
 .form-comment:focus {
@@ -975,8 +975,7 @@ position: absolute;
 
 .form-check-input {
   appearance: none;
-  display: ;
-  /* display: block; */
+  
 }
 
 .unchecked {
