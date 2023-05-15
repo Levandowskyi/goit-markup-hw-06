@@ -867,7 +867,7 @@ img {
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  transition: var(--anim-standart);
+  transition: border-color var(--anim-standart);
 
   outline: transparent;
 }
@@ -889,7 +889,7 @@ position: absolute;
   top: 15%;
   left: 18px;
   transform: translateY(-50%);
-  transition: var(--anim-standart);
+  transition:border-color var(--anim-standart);
   pointer-events: none;
   fill: #2E2F42;
 }
@@ -920,7 +920,7 @@ position: absolute;
   outline: transparent;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  transition: var(--anim-standart);
+  transition:border-color var(--anim-standart);
 }
 
 .form-comment:focus {
